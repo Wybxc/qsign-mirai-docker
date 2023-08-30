@@ -1,0 +1,3 @@
+[submodule "NewYiri"]
+	path = NewYiri
+	url = git@github.com:Wybxc/NewYiri.git
