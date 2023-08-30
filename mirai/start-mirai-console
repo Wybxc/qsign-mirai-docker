@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+java -Dmirai.no-desktop=true -cp "/mirai/libs/*" net.mamoe.mirai.console.terminal.MiraiConsoleTerminalLoader $*
