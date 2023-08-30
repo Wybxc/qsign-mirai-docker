@@ -31,6 +31,9 @@ services:
     container_name: yiri
   mirai:
     build: ./mirai
+    dns:
+      - 223.5.5.5
+      - 223.6.6.6
     ports:
       - "22333:22333"
     volumes:

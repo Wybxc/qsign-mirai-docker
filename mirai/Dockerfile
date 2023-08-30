@@ -11,5 +11,5 @@ curl -L https://ghproxy.com/https://github.com/KasukuSakura/mirai-login-solver-s
 COPY ./run-0.1.0.jar /mirai/plugins/run.jar
 COPY ./yiri-0.1.0.mirai2.jar /mirai/plugins/yiri.mirai2.jar
 COPY ./start-mirai-console /mirai/start-mirai-console
-RUN /mirai/start-mirai-console --no-console && rm /mirai/plugins/run.jar
+RUN chmod +x /mirai/start-mirai-console && /mirai/start-mirai-console --no-console && rm /mirai/plugins/run.jar
 CMD ["/mirai/start-mirai-console"]
