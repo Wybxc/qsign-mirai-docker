@@ -8,8 +8,9 @@ curl -L https://maven.aliyun.com/repository/public/net/mamoe/mirai-console-termi
 mkdir -p /mirai/plugins &&\
 curl -L https://ghproxy.com/https://github.com/cssxsh/fix-protocol-version/releases/download/v1.10.0/fix-protocol-version-1.10.0.mirai2.jar -o /mirai/plugins/fix-protocol-version.mirai2.jar &&\
 curl -L https://ghproxy.com/https://github.com/KasukuSakura/mirai-login-solver-sakura/releases/download/v0.0.12/mirai-login-solver-sakura-0.0.12.mirai2.jar -o /mirai/plugins/mirai-login-solver-sakura.mirai2.jar
-COPY ./run-0.1.0.jar /mirai/plugins/run.jar
-COPY ./yiri-0.2.0.mirai2.jar /mirai/plugins/yiri-0.2.0.mirai2.jar
 COPY ./start-mirai-console /mirai/start-mirai-console
+COPY ./run-0.1.0.jar /mirai/plugins/run.jar
+RUN chmod +x /mirai/start-mirai-console && /mirai/start-mirai-console --no-console
+COPY ./yiri-0.2.0.mirai2.jar /mirai/plugins/yiri-0.2.0.mirai2.jar
 RUN chmod +x /mirai/start-mirai-console && /mirai/start-mirai-console --no-console && rm /mirai/plugins/run.jar
 CMD ["/mirai/start-mirai-console"]
