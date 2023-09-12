@@ -1,3 +1,4 @@
 talkServerHost: yiri
 talkServerPort: 6001
 accept: -1.5
+triggerProbability: 0.03
